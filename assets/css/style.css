@@ -317,3 +317,15 @@ p, li, span, strong{
     font-size: 16px;
 }
 
+
+.navbar-collapse li:hover {
+    background: #fccdd3;
+}
+/*
+#fa-item:hover {
+    background: red;
+}
+
+*/
+
+

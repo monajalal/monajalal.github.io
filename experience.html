@@ -371,6 +371,7 @@
         $("a").css("color", "#660198");
         $("a").css("font-weight", "bold");
         $("li.active a").css("color", "white");
+        $(".list-group-item").css("background","#bbc4ef");
 
     });
     $(".well").mouseenter(
@@ -383,16 +384,19 @@
                 $(this).css('background-color','#bbc4ef');
             });
 
-    $(".navbar-collapse li").hover(
 
-            function () {
-                $(this).css({"background-color":"#fccdd3"});
-            },
+    $(".list-group-item").mouseenter(
+            function(){
+                $(this).css('background-color','#fccdd3');
+            });
 
-            function () {
-                $(this).css({"background-color":"#bbc4ef"});
-            }
-    );
+    $(".list-group-item").mouseleave(
+            function(){
+                $(this).css('background-color','#bbc4ef');
+            });
+
+
+
 
 
 </script>

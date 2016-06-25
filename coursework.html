@@ -212,15 +212,36 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 <script>
-    $(".li").mouseenter(
+    $(document).ready(function() {
+        $(".navbar").css({"background-color": "#bbc4ef"});
+        $(".jumbotron").css({"background-color": "#bbc4ef"});
+        $("li.active a").css("background", "#6479da");
+        $("li.active a").css("color", "white");
+        $(".list-group-item").css("background","#bbc4ef");
+
+    });
+    $(".list-group-item").mouseenter(
             function(){
-                $(this).css('background-color','#33cccc');
+                $(this).css('background-color','#fccdd3');
             });
 
-    $(".li").mouseleave(
+    $(".list-group-item").mouseleave(
             function(){
-                $(this).css('background-color','#f5f5f5');
+                $(this).css('background-color','#bbc4ef');
             });
+
+    $(".navbar-collapse li").hover(
+
+            function () {
+                $(this).css({"background-color":"#fccdd3"});
+            },
+
+            function () {
+                $(this).css({"background-color":"#bbc4ef"});
+            }
+    );
+
+
 </script>
 </body>
 </html>

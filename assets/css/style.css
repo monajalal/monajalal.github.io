@@ -19,7 +19,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
-    font-size: 1rem;
 }
 
 .container {
@@ -313,3 +312,8 @@ h1::after {
 }
 
 */
+
+p, li, span, strong{
+    font-size: 16px;
+}
+

@@ -1,0 +1,29 @@
+@media (min-width: 796px) {
+    .wrap {
+        min-height: calc(100vh - 89px);
+    } 
+    
+    .container {
+        width: 70%;
+        max-width: 1000px;
+        margin: auto;
+    }
+    
+    .nav {
+        display: inline-block;
+    }
+    
+    .nav-item {
+        display: inline-block;
+    }
+
+    .navbar-brand {
+        display: inline-block;
+    }
+
+    
+}
+
+.nav li{
+    margin-right: 12px;
+}

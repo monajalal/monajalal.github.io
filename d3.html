@@ -40,6 +40,7 @@
     </svg>
 
 
+
 <script>
     d3.select("body").append("p").text("New paragraph!");
     var ratData = [ 400, 900, 300, 600 ];
@@ -54,6 +55,9 @@
     d3.csv("./assets/food.csv", function(data) {
         console.log(data)
     });
+    var circle = d3.selectAll('circle');
+    circle.data([32, 57, 112])
+    circle.attr('r', function(d){return Math.sqrt(d)})
 </script>
 </body>
 </html>

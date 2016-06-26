@@ -19,6 +19,25 @@
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
+    background:
+            linear-gradient(
+
+                    mediumpurple,
+                    transparent
+            ),
+            linear-gradient(
+                    45deg,
+                    thistle ,
+                    transparent
+            ),
+            linear-gradient(
+                    -90deg,
+                    plum,
+                    transparent
+            );
+
+
+    background-blend-mode: screen;
 }
 
 .container {
@@ -338,12 +357,12 @@ p, li, span, strong{
                     circle at bottom left,
                     transparent 0,
                     transparent 2em,
-                    beige 2em,
-                    beige 4em,
+                    lavender 2em,
+                    lavender 4em,
                     transparent 4em,
                     transparent 6em,
-                    khaki 6em,
-                    khaki 8em,
+                    thistle 6em,
+                    thistle 8em,
                     transparent 8em,
                     transparent 10em
             ),
@@ -351,12 +370,12 @@ p, li, span, strong{
                     circle at top right,
                     transparent 0,
                     transparent 2em,
-                    beige 2em,
-                    beige 4em,
+                    lavender 2em,
+                    lavender 4em,
                     transparent 4em,
                     transparent 6em,
-                    khaki 6em,
-                    khaki 8em,
+                    thistle 6em,
+                    thistle 8em,
                     transparent 8em,
                     transparent 10em
             ),

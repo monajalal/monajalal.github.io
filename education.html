@@ -135,12 +135,15 @@
     });
     $(".well").mouseenter(
             function(){
-                $(this).css('background-color','#fccdd3');
+                /*$(this).css('background-color','#fccdd3');*/
+
+                $(this).css('background','linear-gradient(#fccdd3, transparent)');
+
             });
 
     $(".well").mouseleave(
             function(){
-                $(this).css('background-color','#bbc4ef');
+                $(this).css('background','linear-gradient(#bbc4ef, transparent)');
             });
     /*
     $(".navbar-collapse li").hover(

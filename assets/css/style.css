@@ -22,7 +22,7 @@ body {
     background:
             linear-gradient(
 
-                    mediumpurple,
+                    thistle,
                     transparent
             ),
             linear-gradient(
@@ -409,6 +409,18 @@ p, li, span, strong{
     background-blend-mode: multiply;
     background-size: 10em 10em;
     background-position: 0 0, 0 0, 5em 5em, 5em 5em;
+}
+
+.label-default {
+    background: thistle;
+}
+
+.label {
+    color: rebeccapurple;
+}
+
+strong {
+    color: rebeccapurple;
 }
 
 

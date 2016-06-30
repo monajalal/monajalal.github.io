@@ -440,6 +440,7 @@ strong {
     /* Set the fixed height of the footer here */
     height: 60px;
     background-color: rgb(187, 196, 239);
+    padding-top: 1.5em;
 }
 
 

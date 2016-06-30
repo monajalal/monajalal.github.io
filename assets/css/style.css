@@ -347,24 +347,17 @@ p, li, span, strong{
 }
 
 
-@keyframes pulse{
-    0%{-webkit-transform:scaleX(1);transform:scaleX(1)}
-    50%{-webkit-transform:scale3d(1.05,1.05,1.05);
-        transform:scale3d(1.05,1.05,1.05)
-    }
-    to{-webkit-transform:scaleX(1);transform:scaleX(1)}
-}
     .navbar-collapse li {
-        animation: pulse 1s;
-        animation-play-state: paused;
+        animation: pulse 2s;
+
     }
     .navbar-collapse li:hover {
         background: #fccdd3;
         animation-play-state: running;
     }
     .list-group-item li {
-        animation: pulse 1s;
-        animation-play-state: paused;
+        animation: pulse 2s;
+
     }
 
     .list-group-item li:hover{
@@ -374,8 +367,8 @@ p, li, span, strong{
     }
 
     .well {
-        animation: pulse 1s;
-        animation-play-state: paused;
+        animation: pulse 2s;
+
     }
     .well:hover {
         background: #fccdd3 !important;
@@ -384,6 +377,20 @@ p, li, span, strong{
 
     }
 
+@keyframes pulse {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05)
+    }
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}
 /*
 #fa-item:hover {
     background: red;

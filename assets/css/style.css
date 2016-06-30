@@ -350,6 +350,15 @@ p, li, span, strong{
 .navbar-collapse li:hover {
     background: #fccdd3;
 }
+
+.list-group-item li:hover{
+    background: #fccdd3;
+}
+
+.well:hover {
+    background: #fccdd3;
+}
+
 /*
 #fa-item:hover {
     background: red;

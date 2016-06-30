@@ -12,9 +12,12 @@
 /* =============================================================
    GENERAL STYLES
  ============================================================ */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
 * {
     box-sizing: border-box !important;
+
 }
+
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -43,6 +46,7 @@ body {
 
 
     background-blend-mode: screen;
+    font-family: Ubuntu !important;
 
 }
 
@@ -442,6 +446,7 @@ strong {
     background-color: rgb(187, 196, 239);
     padding-top: 1.5em;
 }
+
 
 
 

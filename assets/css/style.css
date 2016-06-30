@@ -43,7 +43,7 @@ body {
 
 
     background-blend-mode: screen;
-    margin-bottom: 60px;
+
 }
 
 .container {
@@ -434,7 +434,7 @@ strong {
     clear: both;
 }
 .footer {
-    position: fixed;
+
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */

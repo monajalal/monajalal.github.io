@@ -347,17 +347,42 @@ p, li, span, strong{
 }
 
 
-.navbar-collapse li:hover {
-    background: #fccdd3;
+@keyframes pulse{
+    0%{-webkit-transform:scaleX(1);transform:scaleX(1)}
+    50%{-webkit-transform:scale3d(1.05,1.05,1.05);
+        transform:scale3d(1.05,1.05,1.05)
+    }
+    to{-webkit-transform:scaleX(1);transform:scaleX(1)}
 }
+    .navbar-collapse li {
+        animation: pulse 1s;
+        animation-play-state: paused;
+    }
+    .navbar-collapse li:hover {
+        background: #fccdd3;
+        animation-play-state: running;
+    }
+    .list-group-item li {
+        animation: pulse 1s;
+        animation-play-state: paused;
+    }
 
-.list-group-item li:hover{
-    background: #fccdd3;
-}
+    .list-group-item li:hover{
+        background: #fccdd3 !important;
+        animation-play-state: running;
 
-.well:hover {
-    background: #fccdd3;
-}
+    }
+
+    .well {
+        animation: pulse 1s;
+        animation-play-state: paused;
+    }
+    .well:hover {
+        background: #fccdd3 !important;
+        animation-play-state: running;
+
+
+    }
 
 /*
 #fa-item:hover {

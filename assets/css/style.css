@@ -55,6 +55,43 @@ body {
     padding-right: 1em;
 }
 
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+
+    background: -webkit-linear-gradient(thistle, transparent),
+    -webkit-linear-gradient(45deg, thistle, transparent),
+    -webkit-linear-gradient(-90deg, plum, transparent);
+    background:
+            linear-gradient(
+
+                    thistle,
+                    transparent
+            ),
+            linear-gradient(
+                    45deg,
+                    thistle ,
+                    transparent
+            ),
+            linear-gradient(
+                    -90deg,
+                    plum,
+                    transparent
+            );
+
+
+
+    background-blend-mode: screen;
+    font-family: Ubuntu !important;
+
+}
+
+.container {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 .set-pad {
     padding-top:35px;
 }

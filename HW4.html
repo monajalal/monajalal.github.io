@@ -10,49 +10,79 @@
 <h2>CS585</h2>
 <hr>
 <h2>Problem Definition</h2>
-<p>Tracking images of bats and fish using optical flow and kalman filter. This problem is known as multi-object tracking</p>
+<p>Tracking images of bats and fish using optical flow and kalman filter. This problem is known as multi-object tracking. Also, this programming
+assignment provided me with an opportunity to learn what are the available algorithms and code repositories frequently used
+for the task of multi-object tracking. Trajectory lines are shown as for object tracking to show the object movement trail in the frames.</p>
 <hr>
 <h2>Methods and Implementation</h2>
-<p>I have used OpenCV 3.3.0 and Python 3.6.2 as well as OpenCV2.4 for Python 2.7. I have used Tomas-Shi corner detection for optical flow
-and I have used both sparse and dense optical flow. I have investigated Kalman Filter</p>
+<p>I have used OpenCV 3.3.0 and Anaconda Python 3.6.2. I have used Tomas-Shi corner detection to detect the good features
+    to track for sparse optical flow in the first frame of the video and additionally I have also used dense optical flow. I have investigated and experimented with Kalman Filter for object tracking.
+    I have used ffmpeg command in Unix to convert the JPG and PPM image sequences to AVI video format to feed into VideoCapture method in cv2. I also used the
+    cv2.VideoWriter method for creating a video out a sequence of images however seems that caused problems with optical flow and
+    converting images to video using FFMPEG is a more reliable solution.
+    Side-note: This page is compatible with Google Chrome.
+</p>
 <h2>Experimental results</h2>
 <p>
     From the results it can be understood that optical flow works really well on the fish dataset and not very well on the bat dataset.
-    For the bat dataset kalman filter works really great.
-    Here are some images from the results:
+    For the bat dataset kalman filter works really great. My understanding is that due to sudden joining of the bats to the scene, optical flow
+    is unable to grab their good features because in my implementation, good features rely on the first frame.
+    One thing that we can discuss is using optical flow is definitely better than something like meanshift algorithm because in meanshift you have to
+    select the bounding box for each object that you want to track in the first frame and also you need to have very smooth movements in order to track them using
+    meanshift algorithm. As we see with sparse optical flow, if a sudden movement happens, the tracking trail is longer (shows the acceleration) and if a slow short
+    movement happens the tracking trail is short.
+    <h3>Thomas-Shi Corner Detection</h3>
+    <p>
+        Harris corner detection uses the following formula: <br>
+        <img src="./assets/img/cs585/harris_corner_detection_formula.png" style="width: 150px; height: 50px"/> <br>
+        While Thomas-Shi corner detection uses this other version of the formula: <br>
+        <img src="./assets/img/cs585/thomas_shi_corner_detection_formula.png" style="width: 150px; height: 50px"/> <br>
+        Thomas-Shi corners are detected using the OpenCV method <b>cv2.goodFeaturesToTrack()</b>. As seen in the below images, Thomas-Shi corner detection works quite well for fish dataset and doesn't work very
+    well for the bats dataset.</p>
+    <img src="./assets/img/cs585/thomas_shi_bats.png" style="width: 600px; height: 600px"/>
+    <img src="./assets/img/cs585/thomas_shi_fish.png" style="width: 600px; height: 600px"/>
+    <h3>Sparse Optical Flow</h3>
+    <p>In the sparse optical flow method we only use points of interest to be tracked. As in my implementation, I have used
+    Thomas-Shi corners to track the objects. This is due to the fact that optical flow is a very computational task and we could reduce
+    the computation and speed up the task by only focusing on tracking the most important objects.</p>
+    <img src="./assets/img/cs585/sparse_flow_bats.png" style="width: 600px; height: 600px"/>
+    <img src="./assets/img/cs585/sparse_flow_fish.png" style="width: 600px; height: 600px" />
+    <h3>Dense Optical Flow</h3>
+    <p>In dense optical flow, tracking is done for all the points. Dense optical flow is typically way slower and needs to be run
+    on GPUs for acceleration. However, dense optical flow tends to be more accurate. Gunner Farneback's Optical Flow is a famous method for
+        computing the dense optical flow. In this part, I have used <b>cv2.calcOpticalFlowFarneback</b> for dense optical flow computation.</p>
+    <img src="./assets/img/cs585/dense_flow_bats.png" style="width: 600px; height: 600px"/>
+    <img src="./assets/img/cs585/dense_flow_fish.png" style="width: 600px; height: 600px" />
+    <h3>Kalman Filter</h3>
+    Used the formula from the class besides the Hungarian assignment for correcting/updating the tracks. Additionally, used the notion of
+    skip frame count to remove the track that has not been update in a long time. <br>
+    <img src="./assets/img/cs585/kf_bats.png" style="width: 600px; height: 600px" />
+    <img src="./assets/img/cs585/kf_fish.png" style="width: 600px; height: 600px"/>
+<br>
+    <p></p>
 
-    <table>
-    <tr>
-        <td>
-            <img src="./assets/img/cs585/bat_contours.png" style="width: 400px; height: 400px" />
-        </td>
-        <td>
-            <img src="./assets/img/cs585/bat_dense_optical_flow.png" style="width: 400px; height: 400px"/>
-
-        </td>
-        <td>
-            <img src="./assets/img/cs585/bat_optical_flow.png" style="width: 400px; height: 400px" />
-
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <img src="./assets/img/cs585/fish_dense_optical_flow.png" style="width: 400px; height: 400px" />
-
-        </td>
-        <td>
-            <img src="./assets/img/cs585/fish_optical_flow.png" style="width: 400px; height: 400px" />
-
-        </td>
-        <td>
-            <img src="./assets/img/cs585/kl_bat.png" style="width: 400px; height: 400px" />
-
-        </td>
-    </tr>
-    </table>
-
-
-
+<hr>
+<h2>Challenges</h2>
+<ol>
+    <li>Converting ppm image sequence to video--overcame this problem by updating my ffmpeg to latest version.</li>
+    <li>Sudden appearance of objects into the frame while they were not in the first frame. Tracking algorithms are typically very
+    good at tracking something they saw in the first frame.</li>
+    <li>When it comes to dense optical flow, computational complexity matters. Running the Farenback on GPU would be a solution to this problem.</li>
+    <li>Detecting which features would be the best for tracking. Are really Thomas-Shi corner points the best ones to track in sparse optical flow?</li>
+    <li>Objects occluding each other gets in the way of tracking.</li>
+    <li>Switching from C++ to Python for the new assignment and getting myself comfortable with coding in Python for OpenCV in a short period of time.</li>
+</ol>
+<hr>
+<h2>References</h2>
+    <ol>
+        <li><a href="https://www.pyimagesearch.com/2015/05/25/basic-motion-detection-and-tracking-with-python-and-opencv/">Basic motion detection and tracking with Python and OpenCV</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Optical_flow">Optical Flow</a></li>
+        <li><a href="https://www.learnopencv.com/object-tracking-using-opencv-cpp-python/">Object Tracking using OpenCV (C++/Python)</a></li>
+        <li><a href="https://home.wlu.edu/~levys/kalman_tutorial/">The Extended Kalman Filter: An Interactive Tutorial for Non-Experts</a></li>
+        <li><a href="https://www.codeproject.com/Articles/807839/Dense-Optical-Flow-Expansion-Based-On-Polynomial-B">Dense Optical Flow Expansion Based On Polynomial Basis Approximation</a></li>
+        <li><a href="http://www.nhlcomputervision.nl/wp-content/uploads/SC2015_opticalflow.pdf">Choosing between optical flow algorithms for UAV position change measurement</a></li>
+        <li><a href="https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_feature2d/py_shi_tomasi/py_shi_tomasi.html">Shi-Tomasi Corner Detector & Good Features to Track</a></li>
+    </ol>
 </p>
 
 

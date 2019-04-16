@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        h2 {
+            color: white;
+            font-family: "Comic Sans MS";
+            font-size: 70px;
+            text-align: center;
+            margin: 50px;
+            text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        #calculator {
+            background: radial-gradient(circle, lightcyan, blue, pink);
+            color: mediumpurple;
+            width: 350px;
+            height: 540px;
+            margin: 75px auto;
+            padding: 20px 20px 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #addbutton, #subbutton, #multbutton, #divbutton, #powertobutton,  #clearbutton {
+            background: transparent;
+            font-family: monospace;
+            color: white;
+            float: right;
+            border: 1px solid white;
+            font-size: 40px;
+            border-radius: 20px;
+            height: 100px;
+            outline: plum;
+            text-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+            margin: 5px 5px;
+            padding: 20px 15px;
+            text-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+            width: 100px;
+            height: 100px;
+        }
+
+        #addbutton:hover, #subbutton:hover,  #multbutton:hover, #divbutton:hover, #clearbutton:hover, #powertobutton:hover {
+            background-color: white;
+            color: plum;
+        }
+        #clearbutton {
+            width: 200px;
+        }
+
+        #box1, #box2, #result {
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 30px;
+            text-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+            background: #e8ceff;
+            outline: transparent;
+            border-radius: 20px;
+            margin: 5px;
+            height: 100px;
+        }
+        #box1, #box2 {
+            text-align: center;
+            height: 100px;
+            color: darkorchid;
+            width: 30%;
+            padding: 10px;
+        }
+        #result{
+            text-align: right;
+            padding: 15px 30px;
+            width: 330px;
+        }
+        body {
+            background: url('https://www.mtu.edu/gradschool/programs/degrees/mathematical-science/images/gettyimages-925167552-515subbanner.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
+    <script>
+        function doAdd() {
+            number1 = Number(document.getElementById('box1').value);
+            number2 = Number(document.getElementById('box2').value);
+            result = number1 + number2;
+            if (result < 0) {
+                document.getElementById('result').style.color = 'red';
+            }
+            else {
+                document.getElementById('result').style.color = 'darkorchid';
+            }
+
+            document.getElementById('result').value = result;
+        }
+
+
+        function doSubtract() {
+            number1 = Number(document.getElementById('box1').value);
+            number2 = Number(document.getElementById('box2').value);
+            result = number1 - number2;
+            if (result < 0) {
+                document.getElementById('result').style.color = 'red';
+            }
+            else {
+                document.getElementById('result').style.color = 'darkorchid';
+            }
+
+            document.getElementById('result').value = result;
+        }
+
+
+        function doMultiply() {
+            number1 = Number(document.getElementById('box1').value);
+            number2 = Number(document.getElementById('box2').value);
+            result = number1 * number2;
+            if (result < 0) {
+                document.getElementById('result').style.color = "red";
+            }
+            else {
+                document.getElementById('result').style.color = 'darkorchid';
+            }
+
+            document.getElementById('result').value = result;
+        }
+
+
+        function doDivide() {
+            number1 = Number(document.getElementById('box1').value);
+            number2 = Number(document.getElementById('box2').value);
+            result = number1 / number2;
+            if (result < 0) {
+                document.getElementById('result').style.color = 'red';
+            }
+            else {
+                document.getElementById('result').style.color = 'darkorchid';
+            }
+
+            document.getElementById('result').value = result;
+        }
+
+
+        function doPower() {
+            let base = Number(document.getElementById('box1').value);
+            let exponent = Number(document.getElementById('box2').value);
+            let result = 1;
+            for (let count = 0; count < exponent; count++) {
+                result *= base;
+            }
+            if (result < 0) {
+                document.getElementById('result').style.color = 'red';
+            }
+            else {
+                document.getElementById('result').style.color = 'darkorchid';
+            }
+
+            document.getElementById('result').value = result;
+        }
+
+
+        function doClear() {
+            document.getElementById('box1').value = "";
+            document.getElementById('box2').value = "";
+            document.getElementById('result').value = "";
+        }
+
+    </script>
+</head>
+
+<body>
+<h2>Our Very Shiny Calculator!</h2>
+<div id="calculator">
+    <div><input id="result" type="text"></div>
+
+    <br>
+    <br>
+    <div id="row1">
+            <input type="text" id="box1">
+            <button id="subbutton"  onclick="doSubtract()">-</button>
+            <button id="addbutton"  onclick="doAdd()">+</button>
+    </div>
+    <br>
+    <br>
+    <div id="row2">
+            <input type="text" id="box2">
+            <button id="divbutton"  onclick="doDivide()">/</button>
+            <button id="multbutton" onclick="doMultiply()">*</button>
+
+    </div>
+    <br>
+    <br>
+    <div id="row3">
+            <button id="powertobutton"  onclick="doPower()">^</button>
+            <button id="clearbutton" onclick="doClear()">CLEAR</button>
+    </div>
+</div>
+</body>
+<foot>
+</foot>
+
+</html>

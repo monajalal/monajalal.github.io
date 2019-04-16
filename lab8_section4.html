@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script>
+        function doAdd() {
+            alert('Hi');
+            let number1 = Number(document.getElementById('box1').value);
+            let number2 = Number(document.getElementById('box2').value);
+            let sum = number1 + number2;
+            document.getElementById('result').value = sum;
+        }
+    </script>
+
+</head>
+
+<body>
+<!-- this is HTML code -->
+<h1>Add Two Numbers</h1>
+<label>Number 1</label>
+<input type="text" id="box1" placeholder="enter a number"> <br> <br>
+<label>Number 2</label>
+<input type="text" id="box2" placeholder="enter a number"> <br> <br>
+<label>Sum</label>
+<input type="text" id="result" placeholder="sum of two numbers">
+<button onclick="doAdd()">+</button>
+</body>
+
+</html>

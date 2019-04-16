@@ -1,0 +1,54 @@
+<html>
+<head>
+    <script>
+        function sayMessage(message) {
+            //alert shows a message and pauses script execution until the user presses “OK”.
+            alert(message);
+        }
+        function getText() {
+            let text = document.getElementById('box1').value;
+            alert('Length = ' + text.length)
+        }
+
+        function getTextParaDisplay () {
+            let text = document.getElementById('box1').value;
+            //innerHTML :: To change the content of an HTML element
+            document.getElementById('display').innerHTML =
+                //The length property returns the length of a string
+                'The length of the string ' + text + ' is ' +
+                text.length + ' characters long.';
+        }
+
+        function mult() {
+            let value = Number(document.getElementById('multbox').value);
+            //let value = document.getElementById('multbox').value;
+            document.getElementById('multbox').value =
+                value + 42;
+            document.getElementById('multbox').style.color='red';
+        }
+    </script>
+
+</head>
+
+<body>
+
+<!-- onClick :: Execute a JavaScript when a button is clicked -->
+<button onclick="sayMessage('Hey Now! How is Maggie feeling?')">CLIK!</button>
+<p onclick="sayMessage('In the para!')">Here is some text</p>
+
+My text <input id="box1" type="text">
+<br/>
+<button onclick="getText()">Get it (alert)</button>
+<br/>
+<button onclick="getTextParaDisplay()">Mona</button>
+<p id='display'>The length of the string</p>
+<input type="password"> Password<br/>
+<input type="date"> Date<br/>
+<input type="email"> Email
+<p>Numbers as input: Multiply numbers by 42</p>
+<!-- The onchange attribute fires the moment when the value of the element is changed. -->
+<input type="text" id='multbox' onchange="mult()">
+
+</body>
+
+</html>

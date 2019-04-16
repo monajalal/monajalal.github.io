@@ -1,0 +1,48 @@
+<html>
+<head>
+    <script>
+        function sayMessage(message) {
+            alert(message);
+        }
+        function getText() {
+            let text = document.getElementById('box1').value;
+            alert('Length = ' + text.length)
+        }
+
+        function getTextParaDisplay () {
+            let text = document.getElementById('box1').value;
+            document.getElementById('display').innerHTML =
+                'The length of the string ' + text + ' is ' +
+                text.length + ' characters long.';
+        }
+
+        function mult() {
+            let value = Number(document.getElementById('multbox').value);
+            //let value = document.getElementById('multbox').value;
+            document.getElementById('multbox').value =
+                value + 42;
+            document.getElementById('multbox').style.color='red';
+        }
+    </script>
+
+</head>
+
+<body>
+<button onclick="sayMessage('Hey Now! How is Maggie feeling?')">CLIK!</button>
+<p onclick="sayMessage('In the para!')">Here is some text</p>
+
+My text <input id="box1" type="text">
+<br/>
+<button onclick="getText()">Get it (alert)</button>
+<br/>
+<button onclick="getTextParaDisplay()">Get it (para)</button>
+<p id='display'>The length of the string</p>
+<input type="password"> Password<br/>
+<input type="date"> Date<br/>
+<input type="email"> Email
+<p>Numbers as input: Add a number with 42</p>
+<input type="text" id='multbox' onchange="mult()">
+
+</body>
+
+</html>

@@ -16,54 +16,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1751699939">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.24" value="2" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="3" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="3" />
-          <entry key="project.open.time.7" value="3" />
-          <entry key="project.opened" value="18" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="16271" />
-          <entry key="js" value="873" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="16271" />
-          <entry key="JavaScript" value="873" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="32" />
-          <entry key="js" value="7" />
-          <entry key="md" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="32" />
-          <entry key="JavaScript" value="7" />
-          <entry key="Markdown" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts" />
-      <usages-collector id="statistics.vcs.git.usages" />
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="htdocs" />
   </component>
@@ -276,6 +228,7 @@
     <option name="width" value="1440" />
     <option name="height" value="834" />
   </component>
+  <component name="ProjectId" id="1b6VjvknoP4PFsSncG9Bqvnt5hs" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -317,22 +270,22 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.Lab9.html">
-    <configuration name="Lab9.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/monajalal.github.io/Lab9.html">
+    <configuration name="Lab9.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/monajalal.github.io/Lab9.html">
       <method v="2" />
     </configuration>
-    <configuration name="lab8.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/monajalal.github.io/lab8.html">
+    <configuration name="lab8.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/monajalal.github.io/lab8.html">
       <method v="2" />
     </configuration>
-    <configuration name="fibo.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="fibo.js" working-dir="$PROJECT_DIR$">
+    <configuration name="fibo.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="fibo.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="power.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="power.js" working-dir="$PROJECT_DIR$">
+    <configuration name="power.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="power.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="test_javascript.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="test_javascript.js" working-dir="$PROJECT_DIR$">
+    <configuration name="test_javascript.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="test_javascript.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
@@ -341,7 +294,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+    <configuration default="true" type="mocha-javascript-test-runner">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <working-directory />
@@ -354,11 +307,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Node.js.fibo.js" />
       <item itemvalue="JavaScript Debug.lab8.html" />
+      <item itemvalue="JavaScript Debug.Lab9.html" />
+      <item itemvalue="Node.js.fibo.js" />
       <item itemvalue="Node.js.test_javascript.js" />
       <item itemvalue="Node.js.power.js" />
-      <item itemvalue="JavaScript Debug.Lab9.html" />
     </list>
     <recent_temporary>
       <list>

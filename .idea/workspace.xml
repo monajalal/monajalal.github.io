@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b2fe8170-48ac-4533-b423-3f2f54ac0fc0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coursework.html" beforeDir="false" afterPath="$PROJECT_DIR$/coursework.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/education.html" beforeDir="false" afterPath="$PROJECT_DIR$/education.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/honors.html" beforeDir="false" afterPath="$PROJECT_DIR$/honors.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc.html" beforeDir="false" afterPath="$PROJECT_DIR$/misc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publications.html" beforeDir="false" afterPath="$PROJECT_DIR$/publications.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teaching.html" beforeDir="false" afterPath="$PROJECT_DIR$/teaching.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +159,7 @@
       <workItem from="1594302889378" duration="467000" />
       <workItem from="1594601311583" duration="598000" />
       <workItem from="1594921410269" duration="569000" />
-      <workItem from="1600705570062" duration="4395000" />
+      <workItem from="1600705570062" duration="5121000" />
     </task>
     <servers />
   </component>
